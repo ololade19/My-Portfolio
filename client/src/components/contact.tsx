@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, MapPin, Clock, Github, Linkedin, Twitter, Instagram, Send } from 'lucide-react';
+import { Mail, MapPin, Clock, Github, Twitter, Instagram, Send, MessageCircle, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerChildren } from '@/lib/animations';
 import { useMutation } from '@tanstack/react-query';
@@ -129,11 +129,14 @@ export function Contact() {
                 <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <Linkedin className="w-6 h-6" />
-                </a>
                 <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
                   <Twitter className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-slate-100 dark:bg-slate-700 hover:bg-green-600 dark:hover:bg-green-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
+                  <MessageCircle className="w-6 h-6" />
+                </a>
+                <a href="#" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
+                  <Facebook className="w-6 h-6" />
                 </a>
                 <a href="https://www.instagram.com/ayobami_fc1/" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
                   <Instagram className="w-6 h-6" />

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Twitter, MessageCircle, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { fadeInUp, slideUp } from '@/lib/animations';
 
@@ -46,11 +46,14 @@ export function Hero() {
               <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
                 <Github />
               </a>
-              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
-                <Linkedin />
-              </a>
               <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
                 <Twitter />
+              </a>
+              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
+                <MessageCircle />
+              </a>
+              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
+                <Facebook />
               </a>
             </div>
           </motion.div>

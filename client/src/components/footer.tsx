@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Github, Twitter, Instagram, MessageCircle, Facebook } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,11 +26,14 @@ export function Footer() {
               <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="w-6 h-6" />
-              </a>
               <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-green-400 transition-colors">
+                <MessageCircle className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <Facebook className="w-6 h-6" />
               </a>
               <a href="https://www.instagram.com/ayobami_fc1/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Instagram className="w-6 h-6" />
