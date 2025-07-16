@@ -22,7 +22,7 @@ export function Hero() {
             transition={fadeInUp.transition}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Lawal A-Ameen</span>
+              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Lawal Al-Ameen</span>
             </h1>
             <p className="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
               A passionate <span className="text-emerald-600 dark:text-emerald-400 font-semibold">15-year-old web developer</span> from Nigeria, creating modern and responsive web experiences.

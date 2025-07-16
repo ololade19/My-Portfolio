@@ -7,10 +7,10 @@ import { fadeInUp, staggerChildren } from '@/lib/animations';
 const skills = [
   { name: 'HTML5', level: 95, color: 'bg-orange-600', icon: '🟠' },
   { name: 'CSS3', level: 90, color: 'bg-blue-600', icon: '🔵' },
-  { name: 'JavaScript', level: 85, color: 'bg-yellow-600', icon: '🟡' },
-  { name: 'React', level: 80, color: 'bg-blue-400', icon: '⚛️' },
-  { name: 'Node.js', level: 75, color: 'bg-green-600', icon: '🟢' },
-  { name: 'Git', level: 85, color: 'bg-red-600', icon: '🔴' },
+  { name: 'JavaScript', level: 35, color: 'bg-yellow-600', icon: '🟡' },
+  { name: 'React', level: 40, color: 'bg-blue-400', icon: '⚛️' },
+  { name: 'Node.js', level: 55, color: 'bg-green-600', icon: '🟢' },
+  { name: 'Git', level: 65, color: 'bg-red-600', icon: '🔴' },
 ];
 
 export function About() {
@@ -56,8 +56,8 @@ export function About() {
                       <GraduationCap className="text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-slate-100">Self-Taught Developer</h4>
-                      <p className="text-slate-600 dark:text-slate-400">Currently studying web development through online courses, tutorials, and practical projects</p>
+                      <h4 className="font-semibold text-slate-900 dark:text-slate-100">Kode10X</h4>
+                      <p className="text-slate-600 dark:text-slate-400">Currently studying web development From Kode10X</p>
                     </div>
                   </div>
                 </CardContent>
