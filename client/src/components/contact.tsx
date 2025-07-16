@@ -5,8 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, MapPin, Clock, Github, Twitter, Instagram, Send, MessageCircle, Facebook } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, MapPin, Clock, Github, Twitter, Instagram, Send, MessageCircle, Facebook, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInUp, staggerChildren } from '@/lib/animations';
 import { useMutation } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
@@ -25,6 +25,7 @@ export function Contact() {
     subject: '',
     message: ''
   });
+  const [showSuccess, setShowSuccess] = useState(false);
   const { toast } = useToast();
 
   const contactMutation = useMutation({
@@ -32,10 +33,14 @@ export function Contact() {
       return await apiRequest('POST', '/api/contact', data);
     },
     onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+      }, 2000);
       setFormData({ name: '', email: '', subject: '', message: '' });
     },
     onError: (error) => {
@@ -151,9 +156,56 @@ export function Contact() {
             whileInView={fadeInUp.animate}
             transition={fadeInUp.transition}
             viewport={{ once: true }}
+            className="relative"
           >
             <Card className="bg-slate-50 dark:bg-slate-700 p-8 rounded-2xl">
               <CardContent className="p-0">
+                {/* Success Animation Overlay */}
+                <AnimatePresence>
+                  {showSuccess && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute inset-0 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center z-10"
+                    >
+                      <div className="text-center">
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.2, duration: 0.5, type: "spring" }}
+                          className="w-20 h-20 mx-auto mb-4 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center"
+                        >
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.5, duration: 0.3 }}
+                            className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center"
+                          >
+                            <Check className="w-6 h-6 text-white" />
+                          </motion.div>
+                        </motion.div>
+                        <motion.h3
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.7, duration: 0.3 }}
+                          className="text-xl font-semibold text-slate-900 dark:text-slate-100 mb-2"
+                        >
+                          Message Sent!
+                        </motion.h3>
+                        <motion.p
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.8, duration: 0.3 }}
+                          className="text-slate-600 dark:text-slate-400"
+                        >
+                          Thanks for reaching out!
+                        </motion.p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
