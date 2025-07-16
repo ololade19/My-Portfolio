@@ -9,14 +9,13 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Services', href: '#services' },
-  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const activeSection = useScrollSpy(['home', 'about', 'projects', 'services', 'blog', 'contact']);
+  const activeSection = useScrollSpy(['home', 'about', 'projects', 'services', 'contact']);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
