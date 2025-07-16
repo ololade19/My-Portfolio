@@ -29,7 +29,7 @@ export function Footer() {
               <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-green-400 transition-colors">
+              <a href="http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-400 transition-colors">
                 <MessageCircle className="w-6 h-6" />
               </a>
               <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">

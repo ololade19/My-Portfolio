@@ -8,6 +8,21 @@ This is a modern, responsive portfolio website built with React, Express.js, and
 
 Preferred communication style: Simple, everyday language.
 
+## Personal Information
+- Name: Lawal A-Ameen
+- Age: 15-year-old web developer
+- Location: Nigeria
+- Email: lawalalameen09@gmail.com
+- GitHub: https://github.com/ololade19
+- Twitter: https://x.com/lawalalameen09
+- Instagram: https://www.instagram.com/ayobami_fc1/
+- WhatsApp: http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio
+
+## Recent Changes
+- July 16, 2025: Removed blog section from website
+- July 16, 2025: Added WhatsApp and Facebook links, removed LinkedIn
+- July 16, 2025: Updated all social media links with actual URLs
+
 ## System Architecture
 
 ### Frontend Architecture
