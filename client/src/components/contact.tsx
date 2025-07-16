@@ -98,7 +98,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">Email</h4>
-                  <p className="text-slate-600 dark:text-slate-400">lawal.ameen@example.com</p>
+                  <p className="text-slate-600 dark:text-slate-400">lawalalameen09@gmail.com</p>
                 </div>
               </div>
               
@@ -126,7 +126,7 @@ export function Contact() {
             <motion.div className="pt-6" variants={fadeInUp}>
               <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
-                <a href="#" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
+                <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
                   <Github className="w-6 h-6" />
                 </a>
                 <a href="#" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">

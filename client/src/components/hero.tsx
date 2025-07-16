@@ -43,7 +43,7 @@ export function Hero() {
               </Button>
             </div>
             <div className="flex justify-center lg:justify-start space-x-6 mt-8">
-              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
+              <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
                 <Github />
               </a>
               <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">

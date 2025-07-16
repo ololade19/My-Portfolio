@@ -23,7 +23,7 @@ export function Footer() {
               A passionate young web developer from Nigeria, dedicated to creating modern and responsive web experiences.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
               <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
