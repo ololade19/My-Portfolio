@@ -32,7 +32,7 @@ export function Footer() {
               <a href="http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-green-400 transition-colors">
                 <MessageCircle className="w-6 h-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://web.facebook.com/AyobamiFC/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
               <a href="https://www.instagram.com/ayobami_fc1/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">

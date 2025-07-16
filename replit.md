@@ -17,6 +17,7 @@ Preferred communication style: Simple, everyday language.
 - Twitter: https://x.com/lawalalameen09
 - Instagram: https://www.instagram.com/ayobami_fc1/
 - WhatsApp: http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio
+- Facebook: https://web.facebook.com/AyobamiFC/
 
 ## Recent Changes
 - July 16, 2025: Removed blog section from website
