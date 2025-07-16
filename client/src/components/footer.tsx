@@ -29,7 +29,7 @@ export function Footer() {
               <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
               <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
