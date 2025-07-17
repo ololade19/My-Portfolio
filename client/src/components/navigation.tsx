@@ -31,7 +31,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">LA</span>
-            <span className="ml-2 text-lg font-medium">Lawal A-Ameen</span>
+            <span className="ml-2 text-lg font-medium">Lawal Al-Ameen</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
