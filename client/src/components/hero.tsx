@@ -1,7 +1,17 @@
 import { Button } from '@/components/ui/button';
 import { Github, Twitter, MessageCircle, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, slideUp } from '@/lib/animations';
+
+// Define animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 }
+};
+
+const slideUp = {
+  hidden: { opacity: 0, y: 80 },
+  show: { opacity: 1, y: 0 }
+};
 
 export function Hero() {
   const scrollToSection = (href: string) => {
@@ -15,11 +25,12 @@ export function Hero() {
     <section id="home" className="pt-20 pb-16 lg:pt-28 lg:pb-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             className="text-center lg:text-left"
-            initial={fadeInUp.initial}
-            animate={fadeInUp.animate}
-            transition={fadeInUp.transition}
+            variants={fadeInUp}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Hi, I'm <span className="text-blue-600 dark:text-blue-400">Lawal Al-Ameen</span>
@@ -57,21 +68,22 @@ export function Hero() {
               </a>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex justify-center lg:justify-end"
-            initial={slideUp.initial}
-            animate={slideUp.animate}
-            transition={slideUp.transition}
+            variants={slideUp}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 1 }}
           >
             <div className="relative">
-              <motion.div 
+              <motion.div
                 className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1"
-                animate={{ 
+                animate={{
                   rotate: [0, 360],
                   scale: [1, 1.05, 1]
                 }}
-                transition={{ 
+                transition={{
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
