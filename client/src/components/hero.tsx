@@ -60,7 +60,7 @@ export function Hero() {
               <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">
                 <Twitter />
               </a>
-              <a href="http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors text-2xl">
+              <a href="http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal,+I+contacted+you+from+your+portfolio" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors text-2xl">
                 <MessageCircle />
               </a>
               <a href="https://web.facebook.com/AyobamiFC/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl">

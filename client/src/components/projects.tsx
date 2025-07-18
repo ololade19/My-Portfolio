@@ -158,9 +158,10 @@ export function Projects() {
           transition={fadeInUp.transition}
           viewport={{ once: true }}
         >
+          <a href="https://github.com/ololade19">
           <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">
             View All Projects on GitHub
-          </Button>
+          </Button></a>
         </motion.div>
       </div>
     </section>
