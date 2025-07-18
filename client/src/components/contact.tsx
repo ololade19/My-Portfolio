@@ -67,11 +67,11 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
-          initial={fadeInUp.initial}
-          whileInView={fadeInUp.animate}
-          transition={fadeInUp.transition}
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
@@ -79,14 +79,14 @@ export function Contact() {
             Ready to bring your ideas to life? Let's work together to create something amazing.
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
-            initial={staggerChildren.initial}
-            whileInView={staggerChildren.animate}
-            transition={staggerChildren.transition}
+            variants={staggerChildren}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
           >
             <motion.div variants={fadeInUp}>
@@ -95,8 +95,9 @@ export function Contact() {
                 I'm always excited to work on new projects and collaborate with fellow developers and designers. Whether you have a project in mind or just want to say hello, feel free to reach out!
               </p>
             </motion.div>
-            
+
             <motion.div className="space-y-6" variants={fadeInUp}>
+              {/* Email */}
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
                   <Mail className="text-blue-600 dark:text-blue-400 w-6 h-6" />
@@ -106,7 +107,7 @@ export function Contact() {
                   <p className="text-slate-600 dark:text-slate-400">lawalalameen09@gmail.com</p>
                 </div>
               </div>
-              
+              {/* Location */}
               <div className="flex items-start space-x-4">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-lg">
                   <MapPin className="text-emerald-600 dark:text-emerald-400 w-6 h-6" />
@@ -116,7 +117,7 @@ export function Contact() {
                   <p className="text-slate-600 dark:text-slate-400">Nigeria</p>
                 </div>
               </div>
-              
+              {/* Time */}
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg">
                   <Clock className="text-purple-600 dark:text-purple-400 w-6 h-6" />
@@ -127,34 +128,33 @@ export function Contact() {
                 </div>
               </div>
             </motion.div>
-            
+
+            {/* Social Links */}
             <motion.div className="pt-6" variants={fadeInUp}>
               <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
-                <a href="https://github.com/ololade19" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <Github className="w-6 h-6" />
-                </a>
-                <a href="https://x.com/lawalalameen09" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a href="http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-green-600 dark:hover:bg-green-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <MessageCircle className="w-6 h-6" />
-                </a>
-                <a href="https://web.facebook.com/AyobamiFC/" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <Facebook className="w-6 h-6" />
-                </a>
-                <a href="https://www.instagram.com/ayobami_fc1/" target="_blank" rel="noopener noreferrer" className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
-                  <Instagram className="w-6 h-6" />
-                </a>
+                {/* Repeatable buttons */}
+                {[
+                  { icon: <Github className="w-6 h-6" />, url: "https://github.com/ololade19" },
+                  { icon: <Twitter className="w-6 h-6" />, url: "https://x.com/lawalalameen09" },
+                  { icon: <MessageCircle className="w-6 h-6" />, url: "http://wa.me/2349110002160?text=Hi+Al-Ameen+Lawal+I%20+contact+you+from+your+portfolio" },
+                  { icon: <Facebook className="w-6 h-6" />, url: "https://web.facebook.com/AyobamiFC/" },
+                  { icon: <Instagram className="w-6 h-6" />, url: "https://www.instagram.com/ayobami_fc1/" },
+                ].map((link, idx) => (
+                  <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
+                    className="bg-slate-100 dark:bg-slate-700 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-600 dark:text-slate-400 hover:text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300">
+                    {link.icon}
+                  </a>
+                ))}
               </div>
             </motion.div>
           </motion.div>
-          
+
           {/* Contact Form */}
-          <motion.div 
-            initial={fadeInUp.initial}
-            whileInView={fadeInUp.animate}
-            transition={fadeInUp.transition}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
             className="relative"
           >
@@ -206,77 +206,28 @@ export function Contact() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+
+                {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                        Name
-                      </Label>
-                      <Input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Your name"
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      />
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                        Email
-                      </Label>
-                      <Input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="your@email.com"
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      />
+                      <Label htmlFor="email">Email</Label>
+                      <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                     </div>
                   </div>
-                  
                   <div>
-                    <Label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                      Subject
-                    </Label>
-                    <Input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      placeholder="Project inquiry"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                    />
+                    <Label htmlFor="subject">Subject</Label>
+                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
                   </div>
-                  
                   <div>
-                    <Label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                      Message
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={6}
-                      required
-                      placeholder="Tell me about your project..."
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
-                    />
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" name="message" rows={6} value={formData.message} onChange={handleChange} required />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
-                    disabled={contactMutation.isPending}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
+                  <Button type="submit" disabled={contactMutation.isPending} className="w-full">
                     <Send className="w-5 h-5 mr-2" />
                     {contactMutation.isPending ? 'Sending...' : 'Send Message'}
                   </Button>
